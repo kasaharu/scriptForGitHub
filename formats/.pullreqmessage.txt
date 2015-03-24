@@ -1,7 +1,7 @@
 [#ticket-no][WIP][Task/Bug]
 
 ## 対象チケット
-https://github.com/kasaharu/HowToGitHub/ticket-no
+https://github.com/kasaharu/hogehoge/ticket-no
 
 ## 対応内容
 

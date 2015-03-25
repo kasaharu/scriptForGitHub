@@ -27,7 +27,7 @@ GitHub を便利に使うためのスクリプト集
 
 ### Pull Request script 実行
 * `$ cd scripts/ `
-* `$ sh exec_pullrequest.sh 0000 `
+* `$ sh create_pullrequest.sh 0000 `
     * 0000 の部分には BTS などのチケット番号を指定する
 
 * スクリプト実行後は下記のようなページが表示される

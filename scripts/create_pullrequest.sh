@@ -20,7 +20,7 @@ echo 'Create temporary format file.'
 sed -e "s/ticket-no/$ticket_number/g" ~/.pullreqmessage.txt > ~/.pullreqmessage_temp.txt
 
 echo 'Exec Pull Request'
-hub pull-request --browse -F ~/.pullreqmessage_temp.txt -b kasaharu:master -h kasaharu:$(git symbolic-ref --short HEAD)
+hub pull-request --browse -F ~/.pullreqmessage_temp.txt -b kasaharu:master -h kasaharu:$(git rev-parse --abbrev-ref HEAD)
 
 echo 'Delete temporary format file.'
 rm ~/.pullreqmessage_temp.txt

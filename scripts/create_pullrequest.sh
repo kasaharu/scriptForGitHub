@@ -15,13 +15,13 @@ else
   exit 1
 fi
 
-
 echo 'Create temporary format file.'
-sed -e "s/ticket-no/$ticket_number/g" ~/.pullreqmessage.txt > ~/.pullreqmessage_temp.txt
+TMP_FILE=~/.gh_message_templates/pull_request_temp.txt
+sed -e "s/ticket-no/$ticket_number/g" ~/.gh_message_templates/pull_request.txt > $TMP_FILE
 
 echo 'Exec Pull Request'
-hub pull-request --browse -F ~/.pullreqmessage_temp.txt -b kasaharu:master -h kasaharu:$(git rev-parse --abbrev-ref HEAD)
+hub pull-request --browse -F $TMP_FILE -b kasaharu:master -h kasaharu:$(git rev-parse --abbrev-ref HEAD)
 
 echo 'Delete temporary format file.'
-rm ~/.pullreqmessage_temp.txt
+rm $TMP_FILE
 

@@ -1,8 +1,7 @@
 #!/bin/sh
 echo "Copy format files to HOME."
 
-cp ../formats/.gitmessage.txt ~/
-cp ../formats/.pullreqmessage.txt ~/
+cp -r ../.gh_message_templates ~/
 
 echo "Done."
 

@@ -6,12 +6,11 @@ GitHub を便利に使うためのスクリプト集
 * hub コマンドがインストールされていること
 
 ## コミットメッセージテンプレート
-* formats/.gitmessage.txt
+* .gh_message_templates/.commit.txt
 
 
 ## Pull Request テンプレート
-* formats/.pullreqmessage.txt
-
+* .gh_message_templates/.pull_request.txt
 
 ## How to use
 
@@ -22,8 +21,7 @@ GitHub を便利に使うためのスクリプト集
 
 ### コミットメッセージテンプレートの使い方
 * 下記コマンドを入力することで `git commit` 実行時にテンプレートファイルを読み込むようになる
-    * `$ git config --global commit.template ~/.gitmessage.txt `
-
+    * `$ git config --global commit.template ~/.gh_message_templates/commit.txt `
 
 ### Pull Request script 実行
 * `$ cd scripts/ `

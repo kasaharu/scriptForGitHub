@@ -1,0 +1,12 @@
+#!/bin/sh
+
+while read local_ref local_sha1 remote_ref remote_sha1
+do
+  if [ "${remote_ref##refs/heads/}" = "master" ];
+  then
+    echo "[Alert] Deny the pushing to master."
+    echo "        If you want to forced push, please use the '--no-verify' option."
+    exit 1
+  fi
+done
+
